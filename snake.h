@@ -34,6 +34,7 @@ class Snake{
         #define FRAME_BLOCK '+'
         #define FOOD_BLOCK  '#'
         #define SNAKE_BLOCK '*'
+        #define SPACE_BLOCK ' '
         #define CLEAR_CMD "clear"
         #define NUM_BLANK 0
         #define NUM_FRAME 1

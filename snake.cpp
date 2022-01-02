@@ -90,7 +90,11 @@ void Snake::draw_snake_in_background(const int number) {
 void Snake::show_snake_frame(void) {
   for (h=0; h<HEIGHT; h++) {
     for (w=0; w<WIDTH; w++) {
-      cout << background[h][w];
+      if(background[h][w] == 0){
+        cout << SPACE_BLOCK;
+      }else{
+        cout << background[h][w];
+      }
       switch (background[h][w])
       {
         case NUM_FRAME:
@@ -103,7 +107,7 @@ void Snake::show_snake_frame(void) {
           cout << SNAKE_BLOCK;
           break;
         default:
-          cout << " ";
+          cout << SPACE_BLOCK;
           break;
       }
     }
