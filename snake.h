@@ -31,9 +31,9 @@ class Snake{
     private:
         #define WIDTH 50
         #define HEIGHT 25
-        #define FRAME_BLOCK '+'
-        #define FOOD_BLOCK  '#'
-        #define SNAKE_BLOCK '*'
+        #define FRAME_BLOCK '1'
+        #define FOOD_BLOCK  '2'
+        #define SNAKE_BLOCK '3'
         #define SPACE_BLOCK ' '
         #define CLEAR_CMD "clear"
         #define NUM_BLANK 0

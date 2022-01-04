@@ -57,18 +57,18 @@ void Snake::initialise_snake(void){
 
 /*更新蛇显示，关键代码*/
 void Snake::update_snake_coordination(void){
-  px = snake[0][0];
-  py = snake[0][1];
-  snake[0][0] = px + movementx;
-  snake[0][1] = py + movementy;
-  nx =snake[0][0];
-  ny =snake[0][1];
+  px = snake[0][SNAKE_X];
+  py = snake[0][SNAKE_Y];
+  snake[0][SNAKE_X] = px + movementx;
+  snake[0][SNAKE_Y] = py + movementy;
+  nx =snake[0][SNAKE_X];
+  ny =snake[0][SNAKE_Y];
 
   for (length=1; length<snakelen; length++) {
     nx = snake[length][SNAKE_X];
     ny = snake[length][SNAKE_Y];
-    snake[length][0]=px;
-    snake[length][1]=py;
+    snake[length][SNAKE_X]=px;
+    snake[length][SNAKE_Y]=py;
     px = nx;
     py = ny;
   }
@@ -97,13 +97,13 @@ void Snake::show_snake_frame(void) {
       }
       switch (background[h][w])
       {
-        case NUM_FRAME:
+        case (int)NUM_FRAME:
           cout << FRAME_BLOCK;
           break;
-        case NUM_FOOD:
+        case (int)NUM_FOOD:
           cout << FOOD_BLOCK;
           break;
-        case NUM_SNAKE:
+        case (int)NUM_SNAKE:
           cout << SNAKE_BLOCK;
           break;
         default:
